@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="order"
+            type="com.ote.otedeliveries.models.Order" />
+    </data>
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/big_margin"
+            android:paddingRight="@dimen/big_margin"
+            android:layout_above="@+id/layout_buttons"
+            android:layout_marginTop="@dimen/activity_horizontal_margin">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <!-- Pickup Address -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/pickup_address_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/pickup_address"
+                    app:errorTextAppearance="@style/TextLabel">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/pickup_address_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|textCapSentences"
+                        android:textColor="@color/grey_60"
+                        android:importantForAutofill="no"
+                        android:enabled="false"
+                        android:text="@{order.pickupAddress}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Pickup Contact Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/pickup_contact_name_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/pickup_contact_name"
+                    app:errorTextAppearance="@style/TextLabel"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/pickup_contact_name_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|textCapWords"
+                        android:textColor="@color/grey_60"
+                        android:importantForAutofill="no"
+                        android:text="@{order.pickupContact}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Pickup Contact Number -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/pickup_contact_number_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/pickup_contact_number"
+                    app:errorTextAppearance="@style/TextLabel"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/pickup_contact_number_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textColor="@color/grey_60"
+                        android:importantForAutofill="no"
+                        android:text="@{order.pickupContactNumber}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Drop off address -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/dropoff_address_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/dropoff_address"
+                    app:errorTextAppearance="@style/TextLabel"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/drop_off_address_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|textCapSentences"
+                        android:textColor="@color/grey_60"
+                        android:importantForAutofill="no"
+                        android:enabled="false"
+                        android:text="@{order.dropOffAddress}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Drop off Contact Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/dropoff_contact_name_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/dropoff_contact_name"
+                    app:errorTextAppearance="@style/TextLabel"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/drop_off_contact_name_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text|textCapWords"
+                        android:textColor="@color/grey_60"
+                        android:importantForAutofill="no"
+                        android:text="@{order.dropOffContact}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Drop off Contact Number -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/dropoff_contact_number_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/dropoff_contact_number"
+                    app:errorTextAppearance="@style/TextLabel"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/drop_off_contact_number_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textColor="@color/grey_60"
+                        android:importantForAutofill="no"
+                        android:text="@{order.dropOffContactNumber}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Leave a Note -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/notes_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/leave_a_note"
+                    app:errorTextAppearance="@style/TextLabel"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:layout_marginBottom="@dimen/activity_horizontal_margin">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/notes_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:textColor="@color/grey_60"
+                        android:importantForAutofill="no"
+                        android:minLines="4"
+                        android:text="@{order.notes}"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <RelativeLayout
+            android:id="@+id/layout_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_80"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimaryDark"
+            android:padding="@dimen/spacing_middle">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/cancel_button"
+                style="@style/ButtonPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/noto_sans_light"
+                android:gravity="center"
+                android:text="@string/back"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/request_rider"
+                style="@style/ButtonPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="@string/request_rider"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

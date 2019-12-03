@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="?selectableItemBackgroundBorderless"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:tint="@color/colorWhite"
+                android:src="@drawable/ic_left"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/search_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/set_dropoff"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_size_toolbar" />
+        </LinearLayout>
+        <include
+            android:id="@+id/content"
+            layout="@layout/content_search_destination" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,31 @@
+package com.ote.otedeliveries.utils
+
+const val SEARCH_LOCATION_REQUEST_CODE = 1001
+const val LOCATION_REQUEST_CODE = 1002
+const val PICKUP_LOCATION_REQUEST_CODE = 1003
+const val PICK_ADDRESS_REQUEST_CODE = 1003
+const val UPDATE_PICKUP_LOCATION_REQUEST_CODE = 1004
+const val DELIVERY_LOCATION_REQUEST_CODE = 1005
+const val UPDATE_DELIVERY_LOCATION_REQUEST_CODE = 1006
+const val PICKUP_ADDRESS = 1
+const val DELIVERY_ADDRESS = 2
+const val STOP_ADDRESS = 3
+const val BASE_URL: String = "http://192.168.43.183:5002/api/v1/"
+const val MAPS_BASE_URL: String = "https://maps.googleapis.com/maps/api/"
+const val ROADS_BASE_URL: String = "https://roads.googleapis.com/v1/"
+const val API_KEY: String = "Your API Key here"
+const val STATUS_OK = "OK"
+const val STATUS_ZERO_RESULTS = "ZERO_RESULTS"
+const val STATUS_NOT_FOUND = "NOT_FOUND"
+const val REGION_KENYA = "ke"
+const val SMALL_LOAD = 1
+const val MEDIUM_LOAD = 2
+const val LARGE_LOAD = 3
+const val LOAD_MOTOR_BIKE = 1
+const val LOAD_TUK_TUK = 2
+const val LOAD_PICKUP = 3
+const val LOAD_3_TONE_TRUCK = 4
+const val MOTOR_BIKE_PRICE = 10
+const val TUK_TUK_PRICE = 25
+const val PICKUP_PRICE = 40
+const val THREE_TONE_TRUCK_PRICE = 100

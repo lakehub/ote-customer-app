@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#017670</color>
+    <color name="colorPrimaryLight">#20017670</color>
+    <color name="colorPrimaryLight2">#30017670</color>
+    <color name="colorPrimaryDark">#00504a</color>
+    <color name="colorAccent">@color/colorPrimaryDark</color>
+
+    <color name="colorWhite">#fff</color>
+    <color name="colorMenuGrey">#727272</color>
+    <color name="homeBackground">#ebe8e1</color>
+
+    <color name="navigationBarColor">#00756f</color>
+    <color name="navigationBodyColor">#22595e</color>
+
+    <color name="grey_3">#f7f7f7</color>
+    <color name="grey_5">#f2f2f2</color>
+    <color name="grey_10">#e6e6e6</color>
+    <color name="grey_20">#cccccc</color>
+    <color name="grey_40">#999999</color>
+    <color name="grey_60">#666666</color>
+    <color name="grey_80">#37474F</color>
+    <color name="grey_90">#263238</color>
+
+    <color name="colorBlack">#000</color>
+    <color name="lightGreen">#e0f0e6</color>
+    <color name="lightPurple">#e7e7f1</color>
+    <color name="greenShade">#3cc372</color>
+    <color name="blueShade">#6674f6</color>
+    <color name="colorRed">#ff0017</color>
+    <color name="paymentBackground">#f6f7f2</color>
+    <color name="lightRed">#f56e63</color>
+    <color name="colorSuccess">#38F1BE</color>
+    <color name="colorError">#F16238</color>
+    <color name="colorWarning">#FA812F</color>
+    <color name="colorGreen">#C8F138</color>
+    <color name="colorOffWhite">#FEF3E2</color>
+    <color name="colorWhiteTranslucent">#AAFFFFFF</color>
+    <color name="colorLight">#FCF2D7</color>
+    <color name="colorDarkLight">#80000000</color>
+    <color name="colorTranslucent">#50000000</color>
+    <color name="colorGray">#CCC</color>
+    <color name="colorGray1">#F4F4F4</color>
+    <color name="colorGray2">#EFEFEF</color>
+    <color name="colorGray3">#EAEAEA</color>
+    <color name="colorGray4">#E5E5E5</color>
+    <color name="colorGrayDark">#8E8E8E</color>
+    <color name="colorGrayLight">#F9F9F9</color>
+    <color name="colorFb">#3b5998</color>
+    <color name="colorRipple">#0099CC</color>
+</resources>

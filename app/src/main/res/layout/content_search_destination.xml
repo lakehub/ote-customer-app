@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="order"
+            type="com.ote.otedeliveries.models.Order" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/fare_button"
+            android:paddingLeft="@dimen/login_body_padding"
+            android:paddingRight="@dimen/login_body_padding">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/content_pane">
+
+                <!-- pickup location -->
+                <AutoCompleteTextView
+                    android:id="@+id/txtPickup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/pick_from"
+                    android:inputType="text|textCapSentences"
+                    android:background="@drawable/from_background"
+                    android:padding="@dimen/slider_regular_padding"
+                    android:layout_marginTop="@dimen/login_body_padding"
+                    android:drawableStart="@drawable/ic_dot"
+                    android:drawableTint="@color/greenShade"
+                    android:drawablePadding="@dimen/spacing_large"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="@dimen/home_text_size"
+                    android:text="@{order.pickupAddress}"/>
+
+                <!-- dropoff location -->
+                <AutoCompleteTextView
+                    android:id="@+id/txtDropOff"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/where_to"
+                    android:textSize="@dimen/home_text_size"
+                    android:background="@drawable/to_background"
+                    android:padding="@dimen/slider_regular_padding"
+                    android:layout_marginTop="@dimen/activity_horizontal_margin"
+                    android:drawableStart="@drawable/ic_dot"
+                    android:drawableTint="@color/blueShade"
+                    android:drawablePadding="@dimen/spacing_large"
+                    android:textColor="@color/grey_60"
+                    android:textColorHint="@color/grey_60"
+                    android:text="@{order.dropOffAddress}"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/fare_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/get_fare"
+            android:background="@drawable/home_button_background"
+            android:textColor="@color/colorWhite"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:textSize="@dimen/home_text_size"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+</layout>

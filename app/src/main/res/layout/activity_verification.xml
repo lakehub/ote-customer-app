@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="br.com.zup.multistatelayout.MultiStateLayout" />
+    </data>
+    <br.com.zup.multistatelayout.MultiStateLayout
+        android:id="@+id/register_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:msl_loadingLayout="@layout/loading_layout">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimaryDark">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/top_back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:tint="@color/colorWhite"
+                    android:src="@drawable/ic_back_toolbar"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/verify_phone_number"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_size_toolbar" />
+            </LinearLayout>
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/layout_buttons"
+                android:layout_below="@+id/toolbar">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/intro_act_padding">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/country_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:background="@color/grey_60"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
+                    <!-- Phone Number -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/phone_number_input"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/phone_number"
+                        app:errorTextAppearance="@style/TextLabel"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/phone_number_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:textColor="@color/grey_60"
+                            android:importantForAutofill="no"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/message_otp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:layout_marginTop="@dimen/activity_horizontal_margin"
+                        android:fontFamily="@font/noto_sans_light"/>
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+            <RelativeLayout
+                android:id="@+id/layout_buttons"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_80"
+                android:layout_alignParentBottom="true"
+                android:background="@color/colorPrimaryDark"
+                android:padding="@dimen/spacing_middle">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/lower_back_button"
+                    style="@style/ButtonPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/noto_sans_light"
+                    android:gravity="center"
+                    android:text="@string/back"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/confirm_button"
+                    style="@style/ButtonPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/confirm"/>
+            </RelativeLayout>
+        </RelativeLayout>
+    </br.com.zup.multistatelayout.MultiStateLayout>
+</layout>
